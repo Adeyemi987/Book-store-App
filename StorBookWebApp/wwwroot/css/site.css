@@ -1,0 +1,155 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+
+:root {
+    --header-height: 3rem;
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 80%, 61%);
+}
+
+/*split1 {
+    display: grid
+}*/
+
+.back {
+    background-image: url("https://res.cloudinary.com/chrismeyer/image/upload/v1632541834/undraw_Sign_in_re_o58h_mjmbfg.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 80% 110%;
+}
+
+.back1 {
+    background-image: url("https://res.cloudinary.com/chrismeyer/image/upload/v1632559663/undraw_Mobile_payments_re_7udl_en5qgb.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+}
+
+
+
+
+.center {
+    justify-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+    width: 400px;
+    background: #f6f6f6;
+    border-radius: 8px;
+    box-shadow: 8px 10px 15px rgba(0,0,0,0.2);
+    margin-left: auto;
+    margin-right: 10em;
+}
+
+.center h1 {
+    text-align: center;
+    padding: 25px 0;
+    border-bottom: 1px solid silver;
+}
+
+.center form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt_field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txt_field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+    top: -5px;
+    color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+    width: 100%;
+}
+
+.pass {
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+    .pass:hover {
+        text-decoration: underline;
+    }
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: var(--first-color);
+    border-radius: 25px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    margin-top: 3rem;
+}
+
+    input[type="submit"]:hover {
+        border-color: var(--first-color-second);
+        transition: .5s;
+    }
+
+.signup_link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+    .signup_link a {
+        color: #2691d9;
+        text-decoration: none;
+    }
+
+        .signup_link a:hover {
+            text-decoration: underline;
+        }

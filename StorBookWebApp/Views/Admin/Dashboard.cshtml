@@ -1,0 +1,148 @@
+﻿@{ 
+    IEnumerable<UserModelDTo> Dto = ViewData["GetUser"] as IEnumerable<UserModelDTo>;
+    UserModelDTo loggedUser = ViewData["loogedUser"] as UserModelDTo;
+    IEnumerable<BookDTo> Book = ViewData["GetBook"] as IEnumerable<BookDTo>;
+}
+@{
+    ViewData["Title"] = "Admin Page";
+    Layout = "_AdminPage";
+}
+
+
+<div class="cards">
+
+    <div class="card-single">
+        <div>
+            <h1>@Dto.Count()</h1>
+            <span>No of Registered User</span>
+        </div>
+        <div>
+            <span class="las la-users"></span>
+        </div>
+    </div>
+
+    <div class="card-single">
+        <div>
+            <h1>@Book.Count()</h1>
+            <span>Total Books Uploaded</span>
+        </div>
+        <div>
+            <span class="las la-book"></span>
+        </div>
+    </div>
+
+    <div class="card-single">
+        <div>
+            <h1>25</h1>
+            <span>Total number of downloads</span>
+        </div>
+        <div>
+            <span class="las la-download"></span>
+        </div>
+    </div>
+</div>
+<!--Tabla-->
+<div class="recent-grid">
+    <div class="projects">
+        <div class="card">
+            <div class="card-header">
+                <h3>Books</h3>
+
+                <a asp-controller="Admin" asp-action="Book">
+                    See All <span class="las la-arrow-right">
+                    </span>
+                </a>
+            </div>
+
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <td>Date Added</td>
+                                <td>Book Title</td>
+                                <td>Authors Name</td>
+                                <td>Total Review</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Book.Take(7))
+                            {
+                                <tr>
+                                    <td>@item.Created.ToShortDateString()</td>
+                                    <td>
+                                        @{
+                                        var item1 = "";
+                                            if (@item.Title.Length > 17)
+                                            {
+                                               item1 = @item.Title.Substring(0, 17) + " ...";
+                                            }
+                                            else{
+                                                item1 = @item.Title;
+                                            }
+                                        }
+                                        @item1
+                                    </td>
+                                    <td>
+                                        @{
+                                        var item2 = "";
+                                            if (@item.AuthorsOrdered.Contains(","))
+                                            {
+                                               item2 = @item.AuthorsOrdered.Substring(0, @item.AuthorsOrdered.IndexOf(","));
+                                            }
+                                            else{
+                                                item2 = @item.AuthorsOrdered;
+                                            }
+                                        }
+                                        @item2
+                                    </td>
+                                    <td>@item.ReviewsCount</td>
+                                </tr>
+                            }                         
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="customers">
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Registered User</h3>
+
+                <a asp-controller="Admin" asp-action="UserContact">
+                    See All <span class="las la-arrow-right">
+                    </span>
+                </a>
+            </div>
+
+            <div class="card-body">
+
+                @foreach(var user in (Dto.Count() > 5) ? Dto.Take(5) : Dto)
+                {
+                    <div class="customer">
+                        <div class="info">
+                            <img src=@user.ProfilePics width="40px" height="40px" alt="">
+                            <div>
+                                <h4>@user.FirstName @user.LastName</h4>
+                                <small>@user.PhoneNumber</small>
+                            </div>
+                        </div>
+                        <div class="contact">
+                            <small>@*@user.Roles.FirstOrDefault()*@</small>
+                        </div>
+                    </div>
+                }
+                
+
+            </div>
+        </div>
+    </div>
+
+</div>
+

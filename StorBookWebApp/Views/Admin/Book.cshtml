@@ -1,0 +1,89 @@
+﻿@model IEnumerable<StorBookWebApp.Core.MVC.BookDTo>
+@{
+    ViewData["Title"] = "Admin Book Page";
+    Layout = "_AdminPage";
+}
+
+
+<div class="">
+    <div class="projects">
+        <div class="card">
+            <div class="card-header">
+                <a>Add New Book</a>
+            </div>
+
+            <!-- <div class="card-header">
+                <h3>Books</h3>
+
+                <button>See All <span class="las la-arrow-right">
+                </span></button>
+            </div> -->
+
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>Book Title</td>
+                                <td>Author Name</td>
+                                <td>Date Published</td>
+                                <td>Total Ratings</td>
+                                <td>Date Uploaded</td>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    @*<td><img src=@item.CoverUrl width="40px" height="50px" alt="post-1"></td>*@
+                                    <td></td>
+                                    <td>
+                                        @{
+                                        var item1 = "";
+                                            if (@item.Title.Length > 17)
+                                            {
+                                               item1 = @item.Title.Substring(0, 17) + " ...";
+                                            }
+                                            else{
+                                                item1 = @item.Title;
+                                            }
+                                        }
+                                        @item1
+                                    </td>
+                                    <td>
+                                        @{
+                                        var item2 = "";
+                                            if (@item.AuthorsOrdered.Contains(","))
+                                            {
+                                               item2 = @item.AuthorsOrdered.Substring(0, @item.AuthorsOrdered.IndexOf(","));
+                                            }
+                                            else{
+                                                item2 = @item.AuthorsOrdered;
+                                            }
+                                        }
+                                        @item2
+                                    </td>
+                                    <td>
+                                        @item.PublishedOn
+                                    </td>
+                                    <td>@item.ReviewsCount</td>
+                                    <td>@item.Created.ToShortDateString()</td>
+                                    <td style="margin-top:13px">
+                                        <a asp-controller="Admin" asp-action="EditBook" asp-route-id="@item.Id">Edit</a>|
+                                        <a href="">Details</a>|
+                                        <a asp-controller="Admin" asp-action="DeleteBook" asp-route-id="@item.Id">Delete</a>
+                                    </td>
+                            </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿@model StorBookWebApp.Core.MVC.UserModelDTo
+@{ UserModelDTo user = ViewData["getUser"] as UserModelDTo;}
+@{ 
+    ViewData["Title"] = "Delete User";
+    Layout = "_AdminPage";
+}
+
+
+<div>
+  <form asp-action="DeleteUser">
+    <label>User Id</label>
+    <input type="text" id="isbn" asp-for="Id" value="@user.Id" readonly>
+
+    @*<label>Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>*@
+  
+    <input type="submit" value="Delete">
+  </form>
+</div>

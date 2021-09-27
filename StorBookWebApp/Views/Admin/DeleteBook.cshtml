@@ -1,0 +1,23 @@
+﻿@model StorBookWebApp.Core.MVC.BookDTo
+@{ BookDTo book = ViewData["getBook"] as BookDTo;}
+@{ 
+    ViewData["Title"] = "Delete Book";
+    Layout = "_AdminPage";
+}
+
+
+<div>
+  <form asp-action="DeleteBook">
+    <label>Book Id</label>
+    <input type="text" asp-for="Id" value="@book.Id" readonly>
+
+    @*<label>Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>*@
+  
+    <input type="submit" value="Delete">
+  </form>
+</div>

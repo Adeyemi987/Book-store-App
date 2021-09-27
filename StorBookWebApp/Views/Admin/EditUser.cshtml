@@ -1,0 +1,28 @@
+﻿@model StorBookWebApp.Core.MVC.UpdateUser
+@{ UserModelDTo user = ViewData["getUser"] as UserModelDTo;}
+@{ 
+    ViewData["Title"] = "Edit User";
+    Layout = "_AdminPage";
+}
+
+
+<div>
+  <form asp-action="EditUser">
+    <label>First Name</label>
+    <input type="text" id="fname" asp-for="FirstName"  value="@user.FirstName" required>
+
+    <label >Last Name</label>
+    <input type="text" id="lname" asp-for="LastName" value="@user.LastName"  required>
+
+    <label >Phone Number</label>
+    <input type="tel" asp-for="PhoneNumber" value="@user.PhoneNumber" required>
+
+    @*<label>Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>*@ 
+    <input type="submit" value="Submit">
+  </form>
+</div>

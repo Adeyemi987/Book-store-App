@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<LangVersion>preview</LangVersion>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CloudinaryDotNet" Version="1.15.2" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.12.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.12.2" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="8.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StorBookWebApp.Data\StorBookWebApp.Data.csproj" />
+    <ProjectReference Include="..\StorBookWebApp.DTOs\StorBookWebApp.DTOs.csproj" />
+    <ProjectReference Include="..\StorBookWebApp.Models\StorBookWebApp.Models.csproj" />
+    <ProjectReference Include="..\StorBookWebApp.Shared\StorBookWebApp.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

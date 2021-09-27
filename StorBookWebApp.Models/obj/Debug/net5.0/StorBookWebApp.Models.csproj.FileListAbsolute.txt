@@ -1,0 +1,12 @@
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\bin\Debug\net5.0\StorBookWebApp.Models.deps.json
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\bin\Debug\net5.0\StorBookWebApp.Models.dll
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\bin\Debug\net5.0\ref\StorBookWebApp.Models.dll
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\bin\Debug\net5.0\StorBookWebApp.Models.pdb
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\obj\Debug\net5.0\StorBookWebApp.Models.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\obj\Debug\net5.0\StorBookWebApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\obj\Debug\net5.0\StorBookWebApp.Models.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\obj\Debug\net5.0\StorBookWebApp.Models.AssemblyInfo.cs
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\obj\Debug\net5.0\StorBookWebApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\obj\Debug\net5.0\StorBookWebApp.Models.dll
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\obj\Debug\net5.0\ref\StorBookWebApp.Models.dll
+C:\Users\hp\Desktop\week-10-team-e-week-10-project\StorBookWebApp.Models\obj\Debug\net5.0\StorBookWebApp.Models.pdb

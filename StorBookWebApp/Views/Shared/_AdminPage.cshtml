@@ -1,0 +1,80 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>@ViewData["Title"] - StorBookWebApp</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="~/css/admin.css">
+    <link rel="stylesheet" href="~/css/edit.css">
+</head>
+
+<body>
+
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span class="las la-books"></span> <span>Stor</span></h2>
+        </div>
+        <!--Secciones-del-tablero-->
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a  class="@(ViewContext.RouteData.Values["Action"].ToString()=="Dashboard" ? "active":"")" asp-area="" asp-controller="Admin" asp-action="Dashboard">
+                        <span class="las la-home"></span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="@(ViewContext.RouteData.Values["Action"].ToString()=="Book" ? "active":"")" asp-area="" asp-controller="Admin" asp-action="Book">
+                        <span class="las la-book"></span>
+                        <span>Manage Books</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="@(ViewContext.RouteData.Values["Action"].ToString()=="UserContact" ? "active":"")" asp-area="" asp-controller="Admin" asp-action="UserContact">
+                        <span class="las la-users"></span>
+                        <span>Manage User</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label> Stor
+            </h2>
+
+            <div class="search-wrapper">
+
+                <input type="search" placeholder="search "/>
+                @*<a class="las la-search" asp-controller="Admin" asp-action="Search" ></a>*@
+                <span class="las la-search"></span>
+            </div>
+                <div class="user-wrapper">
+                    <img src="" width="40px" height="40px" alt="">
+                    <div>
+                        <h4 id="name"></h4>
+                        <small>Admin Role</small>
+                    </div>
+                </div>
+            
+        </header>
+        <main role="main">
+            @RenderBody()
+        </main>
+
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

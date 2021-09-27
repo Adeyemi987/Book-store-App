@@ -1,0 +1,55 @@
+﻿@model IEnumerable<StorBookWebApp.Core.MVC.UserModelDTo>
+@{
+    ViewData["Title"] = "Admin User Page";
+    Layout = "_AdminPage";
+}
+
+
+<div class="">
+    <div class="projects">
+        <div class="card">
+            <div class="card-header">
+                <a asp-action="AddUser" asp-controller="Admin">Add New User</a>
+            </div>
+
+            <!-- <div class="card-header">
+                <h3>Books</h3>
+
+                <button>See All <span class="las la-arrow-right">
+                </span></button>
+            </div> -->
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>FullName</td>
+                                <td>Email</td>
+                                <td>PhoneNumber</td>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(var user in Model)
+                            {
+                                <tr>
+                                    <td><img src="@user.ProfilePics" width="50px" height="50px" style="border-radius: 50%" alt=""></td>
+                                    <td>@user.FirstName @user.LastName</td>
+                                    <td>@user.Email</td>
+                                    <td>@user.PhoneNumber</td>
+                                    <td style="margin-top:10px">
+                                        <a asp-controller="Admin" asp-action="EditUser" asp-route-id="@user.Id">Edit</a>|
+                                        <a href="">Details</a>|
+                                        <a asp-controller="Admin" asp-action="DeleteUser" asp-route-id="@user.Id">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

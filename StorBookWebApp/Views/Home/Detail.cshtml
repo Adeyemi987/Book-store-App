@@ -1,0 +1,232 @@
+﻿@{
+    ViewData["Title"] = "Detail Page";
+    Layout = "_Layout";
+}
+
+
+<section class="contain">
+    <div class="detail-content">
+
+        <aside class="sidebar sidebar-container">
+            <div class="category">
+                <div class="blog-content" >
+                    <img src="https://covers.openlibrary.org/b/id/5886370-L.jpg" alt="post-1">
+                    <div class="search">
+                        <div class="form-element">
+                            <a asp-action="Download" asp-controller="Home" asp-route-id="Book.Id" class="btn form-btn">Download</a>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="posts">
+            <div class="detail-header">
+                <div class="detail-post">
+                    <h1>A Court of Silver Flames</h1>
+                    <!-- <h3><span>Publisher name: </span>Title of the Book</h3> -->
+                    <h3>Sarah J. Maas</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+                    </p>
+                    <h4>Published on: </h4>
+                    <h4>Isbn: </h4>
+                    <h4>Genre: </h4>
+                    <h4>File Type: </h4>
+                    <h3>Total pages: </h3>
+
+                    <div class="skills_container grid">
+                        <div>
+                            <!--==================== SKILLS 1====================-->
+                            <div class="skills_content skills_open">
+                                <div class="skills_header">
+
+                                    <div>
+                                        <h2 class="skills_title">Rating Overview</h2>
+                                    </div>
+                                </div>
+
+                                <div class="skills_list grid">
+                                    <div class="skills_data">
+                                        <div class="skills_titles">
+                                            <h3 class="skills_name">5 star</h3>
+                                            <span class="skills_number">8.5</span>
+                                        </div>
+                                        <div class="skills_bar">
+                                            <span class="skills_percentage skills_html"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills_data">
+                                        <div class="skills_titles">
+                                            <h3 class="skills_name">4 star</h3>
+                                            <span class="skills_number">5</span>
+                                        </div>
+                                        <div class="skills_bar">
+                                            <span class="skills_percentage skills_css"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills_data">
+                                        <div class="skills_titles">
+                                            <h3 class="skills_name">3 star</h3>
+                                            <span class="skills_number">6.5</span>
+                                        </div>
+                                        <div class="skills_bar">
+                                            <span class="skills_percentage skills_css"></span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="skills_data">
+                                        <div class="skills_titles">
+                                            <h3 class="skills_name">2 star</h3>
+                                            <span class="skills_number">2.5</span>
+                                        </div>
+                                        <div class="skills_bar">
+                                            <span class="skills_percentage skills_js"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills_data">
+                                        <div class="skills_titles">
+                                            <h3 class="skills_name">1 star</h3>
+                                            <span class="skills_number">2</span>
+                                        </div>
+                                        <div class="skills_bar">
+                                            <span class="skills_percentage skills_blazor"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review">
+                        <div class="user-img">
+                            <img src="https://res.cloudinary.com/chrismeyer/image/upload/v1631909452/htsqoaqdu7zqgmannk8o.jpg" alt="post-1">
+                            <div class="user-name">
+                                <h4>Anderson Akunnem</h4>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <h2>"Great book! Loved it"</h2>
+                            <div class="star-review">
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>| Reviewed: 2021-06-16</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                                    
+                        </div>
+                    </div>
+                            
+                    <div class="review">
+                        <div class="user-img">
+                            <img src="https://res.cloudinary.com/chrismeyer/image/upload/v1631909452/htsqoaqdu7zqgmannk8o.jpg" alt="post-1">
+                            <div class="user-name">
+                                <h4>Anderson Akunnem</h4>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <h2>"Great book! Loved it"</h2>
+                            <div class="star-review">
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>| Reviewed: 2021-06-16</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                                    
+                        </div>
+                    </div>
+
+                    <div class="review">
+                        <div class="user-img">
+                            <img src="https://res.cloudinary.com/chrismeyer/image/upload/v1631909452/htsqoaqdu7zqgmannk8o.jpg" alt="post-1">
+                            <div class="user-name">
+                                <h4>Anderson Akunnem</h4>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <h2>"Great book! Loved it"</h2>
+                            <div class="star-review">
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>| Reviewed: 2021-06-16</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                                    
+                        </div>
+                    </div>
+
+
+
+                    <form>
+	                    <div class="split">
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <input type="text" id="lname" name="subject" placeholder="Subject.." required>
+                        </div>
+
+  	                    <textarea required>Some text...</textarea>
+                        <input class="split-submit" type="submit" value="Submit">
+                   
+                    </form>
+                    @*<div class="wrapper">
+                        <form action="" method="POST" class="form">
+                            <div class="row">
+                                <div class="input-group">
+                                            
+                                    <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+                                </div>
+                                <div class="input-group">
+                                            
+                                    <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+                                </div>
+                            </div>
+                            <div class="input-group textarea">
+                                <label for="comment">Comment</label>
+                                <textarea id="comment" name="comment" placeholder="Enter your Comment" required></textarea>
+                            </div>
+                            <div class="input-group">
+                                <button name="submit" class="btn">Post Comment</button>
+                            </div>
+                        </form>
+                    </div>*@
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>

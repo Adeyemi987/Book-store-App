@@ -1,0 +1,42 @@
+﻿@model StorBookWebApp.Core.MVC.LoginUserDto
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+
+<div class="back1">
+<div class="center">
+    <h1>Register</h1>
+    <form asp-action="Login" asp-controller="Home">
+    <div class="txt_field">
+        <input type="text" asp-for="Email" required>
+        <span></span>
+        <label>Firstname</label>
+    </div>
+
+    <div class="txt_field">
+        <input type="text" asp-for="Email" required>
+        <span></span>
+        <label>Lastname</label>
+    </div>
+
+    <div class="txt_field">
+        <input type="text" asp-for="Email" required>
+        <span></span>
+        <label>Email</label>
+    </div>
+
+    <div class="txt_field">
+        <input type="password" asp-for="PassWord" required>
+        <span></span>
+        <label>Password</label>
+    </div>
+    <div class="pass">Forgot Password?</div>
+    <input type="submit" value="Register">
+    <div class="signup_link">
+        Already a member? <a asp-controller="Home" asp-action="Login">SignIn</a>
+    </div>
+    </form>
+    </div>
+</div>

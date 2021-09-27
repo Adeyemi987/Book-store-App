@@ -1,0 +1,68 @@
+﻿:root {
+    --header-height: 3rem;
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 80%, 61%);
+}
+
+
+input[type=text], select {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=tel], select {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 7rem;
+    background-color: var(--first-color);
+    color: white;
+    padding: 14px 20px;
+    margin: 6px 0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: var(--first-color-second);
+    }
+
+
+@media only screen and (max-width: 890px) {
+    input[type=text], select {
+        width: 100%;
+    }
+    input[type=tel], select {
+        width: 100%;
+    }
+}

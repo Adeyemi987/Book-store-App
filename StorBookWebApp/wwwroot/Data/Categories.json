@@ -1,0 +1,12 @@
+[
+  {
+    "Id": 1,
+    "Name": "E Books",
+    "IsActive": true
+  },
+  {
+    "Id": 2,
+    "Name": "Audio Books",
+    "IsActive": false
+  }
+]
